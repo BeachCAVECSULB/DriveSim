@@ -4693,6 +4693,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TactorAutoSetup
       objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380303, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7181444012365380339, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
         type: 3}
       propertyPath: m_LocalPosition.x
