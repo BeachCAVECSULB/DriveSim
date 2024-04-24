@@ -4681,6 +4681,101 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6d8bee7425613c4abf3b0cf9a683878, type: 3}
+--- !u!1001 &272648639
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7181444012365380303, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_Name
+      value: TactorAutoSetup
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380339, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380339, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380339, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380339, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380339, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380339, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380339, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380339, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380339, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380339, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380339, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645069345574079383, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 612158648}
+    - target: {fileID: 8645069345574079383, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 6a2fe2b259b8fc84d9f3e33a0555d1e4,
+        type: 3}
+    - target: {fileID: 7181444012365380336, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: tactorCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380336, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181444012365380336, guid: c49e388ff098b5a48a9d47b33d7b7dc0,
+        type: 3}
+      propertyPath: testDeviceOnStartup
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c49e388ff098b5a48a9d47b33d7b7dc0, type: 3}
 --- !u!4 &275575371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 40cab9d2ca9212847b7b12a883351119,
@@ -5812,7 +5907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 654eb2207d0de00459c54995ec518376, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 654eb2207d0de00459c54995ec518376, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23732,6 +23827,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37f33cda429bedc458f12d07f198e6a8, type: 3}
+--- !u!1 &1409690486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1409690488}
+  - component: {fileID: 1409690487}
+  m_Layer: 0
+  m_Name: SteeringWheelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1409690487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409690486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3047a8618a80261439a21993d26653a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1409690488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409690486}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1410105391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ba93806bea4bfc347a816ffe12324c38,

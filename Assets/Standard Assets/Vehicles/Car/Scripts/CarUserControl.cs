@@ -10,7 +10,6 @@ namespace UnityStandardAssets.Vehicles.Car
     {
         private CarController m_Car; // the car controller we want to use
         [SerializeField] private InputActionAsset playerInput;
-        private InputActionMap playerInputMap;
         [SerializeField] private PlayerInput input;
         private InputAction accelerateInputAction;
         private InputAction footbrakeInputAction;
@@ -70,6 +69,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private void FixedUpdate()
         {
             // pass the input to the car!
+            // might not be using these
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
 #if !MOBILE_INPUT

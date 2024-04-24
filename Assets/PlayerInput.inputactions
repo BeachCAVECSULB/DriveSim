@@ -52,6 +52,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Tactor",
+                    "type": "Button",
+                    "id": "da55694a-ae35-4e71-a643-a9e2371753ad",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -439,6 +447,17 @@
                     "action": "SteeringAngle",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "ecdb0b65-b8c0-4faf-8390-c57c70d0c7d4",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Tactor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
