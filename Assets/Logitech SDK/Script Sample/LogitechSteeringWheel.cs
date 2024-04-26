@@ -36,6 +36,8 @@ public class LogitechSteeringWheel : MonoBehaviour
         forcesLabel += "Play Leds : P\n";
         activeForceAndEffect = new string[9];
         Debug.Log("SteeringInit:" + LogitechGSDK.LogiSteeringInitialize(false));
+        Debug.Log("force: " + LogitechGSDK.LogiHasForceFeedback(0));
+        // must be plugged in rightmost USB slot on dongle to work
     }
 
     void OnApplicationQuit()
