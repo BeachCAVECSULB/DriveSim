@@ -1,34 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private Transform panel;
-    private bool panelIsActive;
 
-    // Start is called before the first frame update
+    [SerializeField] private InputActionAsset playerInput;
+    private InputAction menuInputAction;
+
+    private void Awake()
+    {
+        menuInputAction = playerInput.FindAction("Menu");
+        menuInputAction.performed += DisplayMenu;
+    }
+
     void Start()
     {
         panel.gameObject.SetActive(false);
-        panelIsActive = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            if (panelIsActive == false)
-            {
-                panel.gameObject.SetActive(true);
-                panelIsActive = true;
-            }
-            else
-            {
-                panel.gameObject.SetActive(false);
-                panelIsActive = false;
-            }
-        }
+        menuInputAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        menuInputAction.Disable();
+    }
+
+    private void DisplayMenu(InputAction.CallbackContext context)
+    {
+        panel.gameObject.SetActive(!panel.gameObject.activeSelf);
     }
 }

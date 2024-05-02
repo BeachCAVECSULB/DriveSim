@@ -73,6 +73,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Menu"",
+                    ""type"": ""Button"",
+                    ""id"": ""ae589d23-d157-4ee9-8135-232e2f183977"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -469,6 +477,28 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Tactor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a96d0ea5-b0e3-454e-8658-b2b45005e249"",
+                    ""path"": ""<HID::Logitech G29 Driving Force Racing Wheel>/button7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e137c71b-b537-4a43-9b75-534f72d5c9a4"",
+                    ""path"": ""<Keyboard>/u"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Menu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1053,6 +1083,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_Player_Footbrake = m_Player.FindAction("Footbrake", throwIfNotFound: true);
         m_Player_SteeringAngle = m_Player.FindAction("SteeringAngle", throwIfNotFound: true);
         m_Player_Tactor = m_Player.FindAction("Tactor", throwIfNotFound: true);
+        m_Player_Menu = m_Player.FindAction("Menu", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1121,6 +1152,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Footbrake;
     private readonly InputAction m_Player_SteeringAngle;
     private readonly InputAction m_Player_Tactor;
+    private readonly InputAction m_Player_Menu;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -1132,6 +1164,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @Footbrake => m_Wrapper.m_Player_Footbrake;
         public InputAction @SteeringAngle => m_Wrapper.m_Player_SteeringAngle;
         public InputAction @Tactor => m_Wrapper.m_Player_Tactor;
+        public InputAction @Menu => m_Wrapper.m_Player_Menu;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1162,6 +1195,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Tactor.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTactor;
                 @Tactor.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTactor;
                 @Tactor.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTactor;
+                @Menu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMenu;
+                @Menu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMenu;
+                @Menu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMenu;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1187,6 +1223,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Tactor.started += instance.OnTactor;
                 @Tactor.performed += instance.OnTactor;
                 @Tactor.canceled += instance.OnTactor;
+                @Menu.started += instance.OnMenu;
+                @Menu.performed += instance.OnMenu;
+                @Menu.canceled += instance.OnMenu;
             }
         }
     }
@@ -1350,6 +1389,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnFootbrake(InputAction.CallbackContext context);
         void OnSteeringAngle(InputAction.CallbackContext context);
         void OnTactor(InputAction.CallbackContext context);
+        void OnMenu(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
